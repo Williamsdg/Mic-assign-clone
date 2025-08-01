@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Campus</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Campus</h1>
+    <select id="campusSelector" onchange="goToCampus()">
+      <option value="">-- Choose Campus --</option>
+      <option value="campuses/grantsmill.html">Grants Mill</option>
+      <option value="campuses/greystone.html">Greystone</option>
+      <option value="campuses/fultondale.html">Fultondale</option>
+      <option value="campuses/oxford.html">Oxford</option>
+      <option value="campuses/auburn.html">Auburn</option>
+      <!-- Add more campuses as needed -->
+    </select>
+  </div>
+
+  <script>
+    function goToCampus() {
+      const selector = document.getElementById("campusSelector");
+      const selectedPage = selector.value;
+      if (selectedPage) window.location.href = selectedPage;
+    }
+  </script>
+</body>
+</html>
